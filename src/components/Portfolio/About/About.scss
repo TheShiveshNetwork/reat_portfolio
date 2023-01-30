@@ -1,0 +1,225 @@
+.portfolio__about {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    h1 {
+        font-size: 5vw;
+        line-height: 50px;
+    }
+}
+
+.portfolio__about-intro {
+    min-height: 100vh;
+    margin: 0 2rem 0 2rem;
+
+    .portfolio__about-intro-title {
+        font-size: 120px;
+        width: 80%;
+        line-height: 125px;
+
+        p {
+            margin-top: 10px;
+            width: 70%;
+        }
+
+        .name {
+            color: var(--secondary-color);
+            display: flex;
+            font-weight: 600;
+        }
+
+        @media screen and (max-width: 950px) {
+            font-size: 100px;
+            line-height: 100px;
+        }
+
+        @media screen and (max-width: 767px) {
+            font-size: 70px;
+            line-height: 80px;
+            width: 100%;
+        }
+    }
+
+}
+
+.portfolio__about-intro-img {
+    width: 100%;
+    z-index: -1;
+    max-height: 300px;
+    display: flex;
+    justify-content: flex-end;
+
+    img {
+        max-width: 480px;
+        height: 100%;
+    }
+}
+
+.portfolio__about-masteries-container {
+    min-height: 170vh;
+    height: auto;
+    width: 100%;
+}
+
+.portfolio__about-masteries {
+    background: var(--secondary-color);
+    padding: 3rem;
+    width: calc(100% - 6rem);
+    max-height: 500px;
+    color: #fff;
+    font-size: 1.2rem;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+
+    .portfolio__about-masteries-content {
+        max-width: 650px;
+    }
+}
+
+.portfolio__about-masteries-content-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    color: #000;
+    width: 100%;
+    margin-top: 8rem;
+
+    .card {
+        padding: 0 1.5rem 1rem 1.5rem;
+        width: calc(100% / 4 - 3rem);
+
+        background: #fff;
+        border: 1px solid rgb(186, 186, 186);
+        border-radius: 10px;
+
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .icon {
+            font-size: 2.4rem;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            background: #5BE9B9;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            position: absolute;
+            transform: translateY(-50px);
+        }
+
+        h2 {
+            margin-top: 4.8rem;
+
+            z-index: 56;
+        }
+
+        .content {
+            width: 100%;
+            font-size: 1.1rem;
+            display: flex;
+            flex-direction: column;
+
+            gap: 1.6rem;
+            text-align: left;
+
+            z-index: 55;
+
+            &::before {
+                content: attr(data-type);
+                position: absolute;
+                height: 100px;
+                width: 100px;
+                transform: translate(70%, -100%);
+                z-index: -1;
+                font-size: 45px;
+                rotate: -30deg;
+                opacity: 25%;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+
+    @media screen and (max-width: 1000px) {
+        flex-direction: column;
+        gap: 0;
+
+        .card {
+            width: calc(100% - 2rem);
+            padding-bottom: 0 0 5rem 0;
+
+            h2 {
+                margin-top: 2.6rem;
+            }
+
+            .icon {
+                font-size: 1.4rem;
+                height: 60px;
+                width: 60px;
+                transform: translateY(-30px);
+                position: absolute;
+                margin: 0;
+            }
+
+            .content {
+                display: none;
+            }
+
+            &:nth-child(1) {
+                border-radius: 10px 10px 0 0;
+            }
+
+            &:nth-child(2) {
+                border-radius: 0;
+            }
+
+            &:nth-child(3) {
+                border-radius: 0 0 10px 10px;
+            }
+        }
+    }
+}
+
+.dark .portfolio__about-masteries .card {
+    background: rgb(41, 40, 40);
+    color: #fff;
+
+    .icon {
+        color: #000;
+    }
+}
+
+.level__meter-container {
+    margin-top: .5rem;
+    width: 100%;
+    background: rgb(238, 238, 238);
+    height: 2.5rem;
+    padding: 1px;
+
+    .reading {
+        background: #5BE9B9;
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        span {
+            margin-right: 10px;
+        }
+    }
+}
+
+.dark .level__meter-container {
+    background: rgb(49, 49, 49);
+}

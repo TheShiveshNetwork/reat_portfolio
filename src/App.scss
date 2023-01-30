@@ -1,0 +1,24 @@
+:root {
+  --primary-background: #fff;
+  --secondary-color: #7510F7;
+  --primary-dark-background: rgb(9, 9, 9);
+}
+
+.app__animated_Letters {
+  display: flex;
+}
+
+.app__animated_Letter {
+  cursor: default;
+
+  &:hover {
+    color: var(--secondary-color);
+    text-shadow: 0 0 50px #7410f76a;
+  }
+}
+
+.dark {
+  background: var(--primary-dark-background);
+  color: #fff;
+}
+
